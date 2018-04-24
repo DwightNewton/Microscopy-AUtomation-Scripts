@@ -8,6 +8,13 @@ The pre-processing steps that are automated in this repository are:
 - Creating Projections
 - Renormalizing Images
 
-Each script will, when executed, prompt the user for the number of slidebook images
+Each script will, when executed, prompt the user for the number of Slidebook files, and sometimes the number of images per Slidebook files. Input these as numerical values, without spaces or other characters (i.e. "6" not "six"), then click OK.
 
 ## Deconvolution
+This script is relatively straightforward and simply uses the autoquant widefield function and automates the loading of the next image. **Ensure that Slidebook has been launched, and Windows Explorer is open to your image directory with the top-most file selected.**
+
+Notes:
+- This script was written with the estimate of 1hr/file for deconvolution (~12-15 images/file). Adjust your time accordingly, being conservative in the estimate.
+- If using images taken with the disc-spinning unit (DSU), line 9 will need to be changed.
+
+## Extracting Co-Factors and Exposure Times
