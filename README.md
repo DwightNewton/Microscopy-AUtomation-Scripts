@@ -8,4 +8,6 @@ The pre-processing steps that are automated in this repository are:
 - Creating Projections
 - Renormalizing Images
 
+Each script will, when executed, prompt the user for the number of slidebook images
+
 ## Deconvolution
