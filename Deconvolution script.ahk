@@ -1,4 +1,3 @@
-```AutoHotkey
 inputbox, var,, How many Slidebook files do you have to process?
 
 Loop, %var%
@@ -48,5 +47,3 @@ Loop, %var%
 		send {Down}
 		sleep, 10
 }
-```
-
