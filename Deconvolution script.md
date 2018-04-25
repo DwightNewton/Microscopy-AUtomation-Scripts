@@ -1,4 +1,4 @@
-```AUtoHotkey
+```AutoHotkey
 inputbox, var,, How many Slidebook files do you have to process?
 
 Loop, %var%
