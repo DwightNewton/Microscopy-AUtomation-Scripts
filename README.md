@@ -28,10 +28,33 @@ Notes:
 
 ## Projection and Renormalizing
 **Before starting: Launch Slidebook, open Excel and open the "normalization" worksheet with cell "O3" highligted, and open Windows Explorer to your image directory with the top-most file selected**
+This script opens each file, creates a maximum projection (summation across all Z-planes) for each image, then changes and saves the intensity thresholds based on the values in columns O-M in the excel worksheet.
 
-
-
-
-
-
-
+Notes:
+- As above, this script was written for 3 fluorescent channels, but can be easily adapted to 4 by addition of another block of code like that below (in which 647nm is selected), after line 107
+```AutoHotkey
+Control, ChooseString, 647, ComboBox1, Renormalize ; selects the 4th channel - 647nm shown here
+				sleep 100
+				send {Tab 2}
+				sleep 100
+			WinActivate Microsoft Excel
+				sleep 100
+				send {Right}
+				sleep 100
+				send ^c
+				sleep 100
+				send {Down}
+				sleep 100
+				send {Left}
+				sleep 100
+				send {Left}
+				sleep 100
+			WinActivate Renormalize
+				sleep 100
+				send ^v
+				sleep 100
+				send {Tab 3}
+				sleep 100
+				send {Enter}
+```
+Once these processing steps have been completed, any further qualitative or quantative analyses can be performed with your images.
