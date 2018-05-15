@@ -1,8 +1,13 @@
-setformat float, 0 
-ImageNum = 6
-StepNum = 9
+;Written by Dwight Newton, April 2018
+;Last Updated: May 15th, 2018
 
-loop, 40 {
+setformat float, 0 
+; ensure excel cursor is at right point
+InputBox, LoopNum,, How many image files do you have to process?
+InputBox, ImageNum,, How many images do you have per image file?
+StepNum:= ImageNum + 3
+
+loop, %LoopNum% {
 	WinActivate,, Deconvolved
 		;send {F2}
 		;send ^c
@@ -12,7 +17,8 @@ loop, 40 {
 		sleep, 90000
 	WinActivate,, SlideBook
 		sleep 200
-		loop, %StepNum%	{
+		loop, %StepNum%	
+		{
 			send {Down}
 			sleep 20
 		}
@@ -150,4 +156,4 @@ loop, 40 {
 	send {Down}
 	sleep, 20
 }
-
+Esc::ExitApp

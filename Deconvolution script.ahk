@@ -1,3 +1,5 @@
+;Written by Dwight Newton, April 2018
+;Last Updated: May 15th, 2018
 inputbox, var,, How many Slidebook files do you have to process?
 
 Loop, %var%
@@ -47,3 +49,5 @@ Loop, %var%
 		send {Down}
 		sleep, 10
 }
+Esc::ExitApp
+
