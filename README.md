@@ -19,8 +19,12 @@ Notes:
 - If using images taken with the disc-spinning unit (DSU), line 9 will need to be changed.
 
 ## Extracting Co-Factors and Exposure Times
-**Before starting: Launch Slidebook, open Excel and open the "normalization" worksheet with cell, and open Windows Explorer to your image directory with the top-most file selected**
+**Before starting: Launch Slidebook, open Excel and open the "normalization" worksheet with cell B3 highligted, and open Windows Explorer to your image directory with the top-most file selected**
 This script opens each Slidebook file, extracts exposure times and deconvolution parameters, and loads the next file.
 
 Notes:
-- This script was written for 3 fluorescent channels (405, 488, and 568nm). If using a 4th, ensure you modify the "normalization" worksheet
+- This script was written for 3 fluorescent channels (405, 488, and 568nm). If using a 4th, ensure you modify the "normalization" worksheet. Notify me and I can add additional lines to extract the 4th channel.
+- Once completed, 
+
+## Projection and Renormalizing
+**Before starting: Launch Slidebook, open Excel and open the "normalization" worksheet with cell O3 highligted, and open Windows Explorer to your image directory with the top-most file selected**
