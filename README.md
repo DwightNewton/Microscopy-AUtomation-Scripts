@@ -35,7 +35,7 @@ This script opens each file, creates a maximum projection (summation across all 
 
 Notes:
 - As above, this script was written for 3 fluorescent channels, but can be easily adapted to 4 by addition of another block of code like that below (in which 647nm is selected), after line 107
-```AutoHotkey
+```autohotkey
 Control, ChooseString, 647, ComboBox1, Renormalize ; selects the 4th channel - 647nm shown here
 				sleep 100
 				send {Tab 2}
