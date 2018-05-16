@@ -25,11 +25,13 @@ This script opens each Slidebook file, extracts exposure times and deconvolution
 Notes:
 - This script was written for 3 fluorescent channels (405, 488, and 568nm). If using a 4th, ensure you modify the "normalization" worksheet. Notify me and I can add additional lines to extract the 4th channel
 - Once completed, change the numerator of the "nexp" columns to the median exposure of that channel across all images
-- Furthermore, change the values in O1, P1, and Q1
+- Furthermore, change the values in O1, P1, and Q1 to arbitrary thresholds (e.g. 25,000 or 40,000)
+	* Try these thresholds on a few representative images first, then adjust to get good visualization over them all
+	* If any images have a threshold above 65,535, manually adjust it to 65,535
 
 ## Projection and Renormalizing
 **Before starting: Launch Slidebook, open Excel and open the "normalization" worksheet with cell "O3" highligted, and open Windows Explorer to your image directory with the top-most file selected**
-This script opens each file, creates a maximum projection (summation across all Z-planes) for each image, then changes and saves the intensity thresholds based on the values in columns O-Q in the excel worksheet.
+This script opens each file, creates a maximum projection (summation across all Z-planes) for each image, then changes and saves the intensity thresholds in the look-up table based on the values in columns O-Q in the excel worksheet.
 
 Notes:
 - As above, this script was written for 3 fluorescent channels, but can be easily adapted to 4 by addition of another block of code like that below (in which 647nm is selected), after line 107
