@@ -17,6 +17,7 @@ This script is relatively straightforward and simply uses the autoquant widefiel
 Notes:
 - This script was written with the estimate of 1hr/file for deconvolution (~12-15 images/file). Adjust your time accordingly, being conservative in the estimate
 - If using images taken with the disc-spinning unit (DSU), line 9 will need to be changed to match the change in image naming
+- Before running, ensure lines 7 and 47 contain the exact name of the folder in which your images are located
 
 ## Extracting Co-Factors and Exposure Times
 **Before starting: Launch Slidebook, open Excel and open the "normalization" worksheet with cell "B3" highligted, and open Windows Explorer to your image directory with the top-most file selected**
